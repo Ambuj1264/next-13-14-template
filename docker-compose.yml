@@ -1,0 +1,12 @@
+version: '3'
+services:
+  linkedin_tools_ui:
+    image: linkedin_tools_ui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: linkedin_tools_ui
+    volumes:
+       - ./:/app/linkedin_tools_ui

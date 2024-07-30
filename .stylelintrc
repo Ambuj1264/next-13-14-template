@@ -1,0 +1,186 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-css-modules"],
+  "plugins": ["stylelint-order", "stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "trailingComma": "es5"
+      }
+    ],
+    "selector-max-type": [
+      1,
+      {
+        "ignoreTypes": ["svg", "path", "circle"]
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "at-rules",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "media",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "mqIE",
+        "hasBlock": true
+      },
+      "rules"
+    ],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "Generated content",
+          "properties": ["content"]
+        },
+        {
+          "groupName": "Position",
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "z-index"
+          ]
+        },
+        {
+          "groupName": "Layout",
+          "properties": [
+            "display",
+            "float",
+            "clear",
+            "flex",
+            "flex-basis",
+            "flex-direction",
+            "flex-flow",
+            "flex-grow",
+            "flex-shrink",
+            "flex-wrap",
+            "align-items",
+            "align-self",
+            "justify-content",
+            "order",
+            "grid",
+            "grid-area",
+            "grid-auto-columns",
+            "grid-auto-flow",
+            "grid-auto-rows",
+            "grid-column",
+            "grid-column-end",
+            "grid-column-gap",
+            "grid-column-start",
+            "grid-gap",
+            "grid-row",
+            "grid-row-end",
+            "grid-row-gap",
+            "grid-row-start",
+            "grid-template",
+            "grid-template-areas",
+            "grid-template-columns",
+            "grid-template-rows"
+          ]
+        },
+        {
+          "groupName": "Box model (from outside in)",
+          "properties": [
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "box-shadow",
+            "border",
+            "border-top",
+            "border-right",
+            "border-bottom",
+            "border-left",
+            "border-radius",
+            "border-top-left-radius",
+            "border-top-right-radius",
+            "border-bottom-right-radius",
+            "border-bottom-left-radius",
+            "box-sizing",
+            "width",
+            "min-width",
+            "max-width",
+            "height",
+            "min-height",
+            "max-height",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left"
+          ]
+        },
+        {
+          "groupName": "Background & Cursor",
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "background-position",
+            "background-size",
+            "background-repeat",
+            "background-origin",
+            "background-clip",
+            "background-attachment",
+            "cursor",
+            "pointer-events",
+            "user-select"
+          ]
+        },
+        {
+          "groupName": "Typography",
+          "properties": [
+            "color",
+            "font",
+            "font-family",
+            "font-feature",
+            "font-kerning",
+            "font-size",
+            "font-stretch",
+            "font-style",
+            "font-variant",
+            "font-weight",
+            "letter-spacing",
+            "line-height",
+            "text",
+            "text-align",
+            "text-transform",
+            "vertical-align",
+            "white-space",
+            "word-spacing"
+          ]
+        },
+        {
+          "groupName": "Visibility",
+          "properties": ["opacity", "visibility", "transform"]
+        },
+        {
+          "groupName": "Clipping",
+          "properties": ["clip", "overflow"]
+        },
+        {
+          "groupName": "Animation",
+          "properties": ["animation", "transition"]
+        }
+      ],
+      {
+        "unspecified": "bottomAlphabetical"
+      }
+    ]
+  }
+}
